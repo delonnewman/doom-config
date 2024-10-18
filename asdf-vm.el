@@ -31,7 +31,7 @@
 (require 'cl-lib)
 
 (defgroup asdf-vm nil
-  "Add tools from asdf-vm to path"
+  "Add tools from asdf-vm to path."
   :group 'tools
   :link '(url-link :tag "GitHub" "https://github.com/delonnewman/asdf-vm.el"))
 

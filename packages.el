@@ -82,3 +82,6 @@
 ;; Dylan
 (package! dylan)
 (package! dime)
+
+;; Svelte
+(package! svelte-mode)

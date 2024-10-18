@@ -93,8 +93,12 @@
 ;; (when (eq window-system 'mac)
 ;;   (mac-toggle-tab-bar))
 
+;; Reference for defining keybindings
+;; https://discourse.doomemacs.org/t/how-to-re-bind-keys/56
+
 (load! "drn-vterm")
 (load! "drn-terminal")
+(load! "drn-alternate-editor")
 (load! "drn-slack")
 (load! "drn-emojis")
 (load! "drn-tetris")

@@ -14,4 +14,4 @@
 
 (add-hook 'cperl-mode-hook 'flycheck-mode)
 
-(provide 'perl-config)
+(provide 'drn-perl)
