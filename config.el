@@ -88,7 +88,7 @@
 (context-menu-mode +1)
 
 ;; Enable file and URL references
-(goto-address-mode +1)
+(global-goto-address-mode)
 (ffap-bindings)
 
 ;; OS
