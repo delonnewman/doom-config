@@ -87,6 +87,10 @@
 ;; Enable context menus
 (context-menu-mode +1)
 
+;; Enable file and URL references
+(global-goto-address-mode)
+(ffap-bindings)
+
 ;; OS
 (setq mac-mouse-wheel-mode t)
 (setq mac-mouse-wheel-smooth-scroll t)
