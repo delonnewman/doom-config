@@ -24,44 +24,67 @@
 
 ;;; Code:
 
-(defvar drn-alternate-editor-key (kbd "&"))
 
-(defun drn-add-alternate-editor (hook command)
-  "Add alternate editor.
-Do so by specifying a HOOK that should be used to trigger
-it's use and the COMMAND to execute."
-  (add-hook hook
-            (lambda ()
-              (local-set-key drn-alternate-editor-key
-                             (lambda () (drn-open-current-file-with-command command))))))
+(defvar drn/vscode-command "code")
+(defvar drn/rubymine-command "rubymine")
 
-(defun drn-current-filename ()
+
+(defun drn/current-filename ()
   "Gets the name of the file the current buffer is based on."
   (buffer-file-name (window-buffer (minibuffer-selected-window))))
 
-(defun drn-insert-current-filename ()
+
+(defun drn/insert-current-filename ()
   "Insert the current filename in the current buffer."
   (interactive)
-  (insert (drn-current-filename)))
-(global-set-key (kbd "C-c f") #'drn-insert-current-filename)
+  (insert (drn/current-filename)))
+(global-set-key (kbd "C-c f") #'drn/insert-current-filename)
 
-(defun drn-open-current-file-with-command (command)
+
+(defun drn/open-current-file-with-command (command)
   "Open the current file with COMMAND."
   (interactive "sOpen with command: ")
-  (shell-command (concat command " " (drn-current-filename))))
+  (let ((buffer-name (concat "*open current file with <" command ">*")))
+    (start-process command buffer-name command (drn/current-filename))))
 
-(defun drn-open-current-file-with-vscode ()
+
+(defun drn/open-current-project-with-command (command)
+  "Open the current project with COMMAND."
+  (interactive "sOpen with command: ")
+  (if-let ((root (projectile-project-root))
+           (buffer-name (concat "*open current project with <" command ">*")))
+    (start-process command buffer-name command root)
+    (message "Can't locate project root.")))
+
+
+(defun drn/open-current-file-with-vscode ()
   "Open the current file with Visual Studio Code."
   (interactive)
-  (drn-open-current-file-with-command "code"))
+  (drn/open-current-file-with-command drn/vscode-command))
 
-(defun drn-open-current-file-with-rubymine ()
-  "Open the current file with Visual Ruby Mine."
+
+(defun drn/open-current-file-with-rubymine ()
+  "Open the current file with Ruby Mine."
   (interactive)
-  (drn-open-current-file-with-command "rubymine"))
+  (drn/open-current-file-with-command drn/rubymine-command))
 
-(define-key doom-leader-open-map (kbd "e v") #'drn-open-current-file-with-vscode)
-(define-key doom-leader-open-map (kbd "e r") #'drn-open-current-file-with-rubymine)
+
+(defun drn/open-current-project-with-vscode ()
+  "Open the current project in Visual Studio Code."
+  (interactive)
+  (drn/open-current-project-with-command drn/vscode-command))
+
+
+(defun drn/open-current-project-with-rubymine ()
+  "Open the current project in Ruby Mine."
+  (interactive)
+  (drn/open-current-project-with-command drn/rubymine-command))
+
+
+(define-key doom-leader-open-map (kbd "e v") #'drn/open-current-file-with-vscode)
+(define-key doom-leader-open-map (kbd "e r") #'drn/open-current-file-with-rubymine)
+(define-key doom-leader-open-map (kbd "e p v") #'drn/open-current-project-with-vscode)
+(define-key doom-leader-open-map (kbd "e p r") #'drn/open-current-project-with-rubymine)
 
 (provide 'drn-alternate-editor)
 ;;; drn-alternate-editor.el ends here
