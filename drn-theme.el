@@ -10,12 +10,16 @@
 (defvar drn/light-theme 'doom-tomorrow-day
   "Sets the theme to use when the UI is in light mode.")
 
+(defun drn/load-theme (theme)
+  (setq doom-theme theme)
+  (load-theme theme t))
+
 ;; setup auto-switching between light and dark themes
 (defun drn/apply-theme (appearance)
   "Load theme, taking current system APPEARANCE into consideration."
   (mapc #'disable-theme custom-enabled-themes)
   (pcase appearance
-    ('light (load-theme drn/light-theme t))
-    ('dark (load-theme drn/dark-theme t))))
+    ('light (drn/load-theme drn/light-theme))
+    ('dark (drn/load-theme drn/dark-theme))))
 
 (add-hook 'ns-system-appearance-change-functions #'drn/apply-theme)
