@@ -57,6 +57,20 @@
     (message "Can't locate project root.")))
 
 
+(defmacro drn/define-alternate-editor (name command long-name)
+  "Define an alternate editor NAME will be used in defining function names.
+COMMAND is the shell command that will be used to open the alternate editor, and
+LONG-NAME is the name that will be used in documentation."
+  `(defun ,(make-symbol (concat "drn/open-current-file-with-" name)) ()
+     ,(concat "Open the current file with " long-name)
+     (interactive)
+     (drn/open-current-file-with-command ,command)))
+
+
+;; (macroexpand '(drn/define-alternate-editor "xcode" "open -a XCode" "XCode"))
+(drn/define-alternate-editor "xcode" "open -a XCode" "XCode")
+
+
 (defun drn/open-current-file-with-vscode ()
   "Open the current file with Visual Studio Code."
   (interactive)
