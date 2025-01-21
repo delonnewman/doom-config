@@ -13,7 +13,6 @@
    '((projectile-globally-ignored-files "*.map"
       (\, "public/**/*"))
      (projectile-create-missing-test-files . t)
-     (projectile-rails-custom-server-command . "bundle exec rails server -p 3030")))
  '(warning-suppress-types
    '(((editorconfig editorconfig--advice-find-file-noselect))
      (defvaralias))))

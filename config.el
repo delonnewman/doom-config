@@ -32,7 +32,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-xcode)
+(setq doom-theme 'doom-tomorrow-night)
 
 (setq doom-font (font-spec :family "Jetbrains Mono" :size 14)
       doom-variable-pitch-font (font-spec :family "Helvetica Neue" :size 16)
@@ -107,6 +107,8 @@
 (load! "drn-emojis")
 (load! "drn-tetris")
 (load! "drn-projectile")
+(load! "drn-theme")
 
 (load! "drn-ruby")
 (load! "drn-javascript")
+
