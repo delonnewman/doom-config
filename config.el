@@ -82,7 +82,7 @@
 (setq frame-title-format "%b - Emacs")
 
 ;; AuthSource
-(setq auth-sources '("~/.authinfo.gpg"))
+(setq auth-sources '("~/.authinfo"))
 
 ;; Enable context menus
 (context-menu-mode +1)
