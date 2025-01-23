@@ -4,11 +4,13 @@
 
 ;; Author: Delon Newman <contact@delonnewman.name
 
-(defvar drn/dark-theme 'doom-tomorrow-night
+(defvar drn/dark-theme 'doom-solarized-dark
   "Sets the theme to use when the UI is in dark mode.")
 
-(defvar drn/light-theme 'doom-tomorrow-day
+(defvar drn/light-theme 'doom-solarized-light
   "Sets the theme to use when the UI is in light mode.")
+
+(setq doom-theme drn/light-theme)
 
 (defun drn/load-theme (theme)
   (setq doom-theme theme)
