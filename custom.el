@@ -12,7 +12,7 @@
  '(safe-local-variable-values
    '((projectile-globally-ignored-files "*.map"
       (\, "public/**/*"))
-     (projectile-create-missing-test-files . t)
+     (projectile-create-missing-test-files . t)))
  '(warning-suppress-types
    '(((editorconfig editorconfig--advice-find-file-noselect))
      (defvaralias))))
