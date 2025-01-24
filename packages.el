@@ -49,7 +49,6 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-(package! chocolate-theme)
 (package! slack)
 
 ;; Harvest
@@ -76,12 +75,12 @@
 (package! prettier-js)
 (package! add-node-modules-path)
 
-;; Perl REPL
+;; Perl
 (package! sepia)
 
 ;; Dylan
-(package! dylan)
-(package! dime)
+;; (package! dylan)
+;; (package! dime)
 
-;; Svelte
-(package! svelte-mode)
+;; ;; Svelte
+;; (package! svelte-mode)
