@@ -46,3 +46,24 @@
 (setq drn.pub/w-E (<drn/pub> :symbol "w" :lang "E" :formats '("EPUB" "PDF")))
 (setq drn.pub/wp-E (<drn/pub> :symbol "wp" :lang "E" :formats '("EPUB" "PDF")))
 
+;; (drn/data-url drn.pub/g-E (drn/issue 2024 11))
+
+
+(defvar drn/wget-path "/opt/homebrew/bin/wget")
+(defvar drn/curl-path "/usr/bin/curl")
+
+(defun drn/make-command (name path-var)
+  (lambda (url &optional buffer)
+    (let ((path (eval path-var))
+          (buf (or buffer (generate-new-buffer (concat "*" name " output*")))))
+      (message "Running %s %s..." name url)
+      (start-process name buf path url)
+      (message "Finished %s see results in %s" name (buffer-name buf)))))
+
+(defalias 'drn/wget (drn/make-command "wget" 'drn/wget-path))
+(defalias 'drn/curl (drn/make-command "curl" 'drn/curl-path))
+
+(defvar drn/curl-buffer (generate-new-buffer "*curl output*"))
+(drn/curl (drn/data-url drn.pub/g-E (drn/issue 2024 11)) drn/curl-buffer)
+
+(message "Running %s %s..." "wget" (drn/data-url drn.pub/g-E (drn/issue 2024 11)))
