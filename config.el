@@ -104,6 +104,8 @@
 (load! "drn-projectile")
 (load! "drn-theme")
 
+(load! "drn-org-mode")
+
 (load! "drn-ruby")
 (load! "drn-javascript")
 
