@@ -52,7 +52,7 @@
 (package! slack)
 
 ;; Harvest
-(package! reaper)
+;; (package! reaper)
 
 ;; EPUB Reader
 (package! nov)
@@ -84,3 +84,7 @@
 
 ;; ;; Svelte
 ;; (package! svelte-mode)
+
+;; UI
+(package! modus-theme)
+(package! treemacs-nerd-icons)

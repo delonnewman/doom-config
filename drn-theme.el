@@ -4,10 +4,10 @@
 
 ;; Author: Delon Newman <contact@delonnewman.name
 
-(defvar drn/dark-theme 'doom-tomorrow-night
+(defvar drn/dark-theme 'modus-operandi
   "Sets the theme to use when the UI is in dark mode.")
 
-(defvar drn/light-theme 'doom-tomorrow-day
+(defvar drn/light-theme 'modus-vivendi
   "Sets the theme to use when the UI is in light mode.")
 
 (setq doom-theme drn/light-theme)
