@@ -86,5 +86,5 @@
 ;; (package! svelte-mode)
 
 ;; UI
-(package! modus-theme)
+(package! modus-themes)
 (package! treemacs-nerd-icons)
