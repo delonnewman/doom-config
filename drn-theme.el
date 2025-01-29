@@ -4,11 +4,13 @@
 
 ;; Author: Delon Newman <contact@delonnewman.name
 
-(defvar drn/dark-theme 'modus-operandi
+(defvar drn/dark-theme 'modus-vivendi
   "Sets the theme to use when the UI is in dark mode.")
 
-(defvar drn/light-theme 'modus-vivendi
+(defvar drn/light-theme 'modus-operandi
   "Sets the theme to use when the UI is in light mode.")
+
+(setq modus-themes-mode-line '(borderless))
 
 (setq doom-theme drn/light-theme)
 
