@@ -74,7 +74,7 @@
 ;; they are implemented.
 
 ;; Frame Title
-(setq frame-title-format "%b - Emacs")
+(setq frame-title-format "%b - Love is as strong as death is")
 
 ;; AuthSource
 (setq auth-sources '("~/.authinfo"))
@@ -103,6 +103,8 @@
 (load! "drn-tetris")
 (load! "drn-projectile")
 (load! "drn-theme")
+
+(load! "drn-org-mode")
 
 (load! "drn-ruby")
 (load! "drn-javascript")
