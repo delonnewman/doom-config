@@ -187,8 +187,8 @@ an alist of OPTIONS."
 ;;          (drn/open-file-with-command
 ;;           (drn/current-filename)
 ;;           "code %s")))
-(define-key doom-leader-open-map (kbd "e v") #'drn/open-current-file-with-vscode)
-(define-key doom-leader-open-map (kbd "e p v") #'drn/open-current-project-with-vscode)
+;; (define-key doom-leader-open-map (kbd "e v") #'drn/open-current-file-with-vscode)
+;; (define-key doom-leader-open-map (kbd "e p v") #'drn/open-current-project-with-vscode)
 
 ;; (macroexpand '(drn/deftool rubymine "RubyMine" "rubymine %s"))
 ;; (progn
@@ -202,8 +202,8 @@ an alist of OPTIONS."
 ;;          (drn/open-file-with-command
 ;;           (drn/current-filename)
 ;;           "rubymine %s")))
-(define-key doom-leader-open-map (kbd "e r") #'drn/open-current-file-with-rubymine)
-(define-key doom-leader-open-map (kbd "e p r") #'drn/open-current-project-with-rubymine)
+;; (define-key doom-leader-open-map (kbd "e r") #'drn/open-current-file-with-rubymine)
+;; (define-key doom-leader-open-map (kbd "e p r") #'drn/open-current-project-with-rubymine)
 
 ;; (macroexpand '(drn/deftool xcode "XCode" "open -a XCode %s"))
 ;; (progn
