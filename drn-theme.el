@@ -10,11 +10,11 @@
 (defvar drn/light-theme 'modus-operandi
   "Sets the theme to use when the UI is in light mode.")
 
-(setq doom-theme drn/light-theme)
-
 (defun drn/load-theme (theme)
   (setq doom-theme theme)
   (load-theme theme t))
+
+(drn/load-theme drn/light-theme)
 
 ;; setup auto-switching between light and dark themes
 (defun drn/apply-theme (appearance)
