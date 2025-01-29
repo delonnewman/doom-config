@@ -10,8 +10,6 @@
 (defvar drn/light-theme 'modus-operandi
   "Sets the theme to use when the UI is in light mode.")
 
-(setq modus-themes-mode-line '(borderless))
-
 (setq doom-theme drn/light-theme)
 
 (defun drn/load-theme (theme)
