@@ -24,18 +24,20 @@
 
 ;;; Code:
 
-(after! org
-  (when window-system
-    (setq org-hide-emphasis-markers t)
-    (font-lock-add-keywords 'org-mode
-                            '(("^ *\\([-]\\) "
-                               (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
-    (add-hook 'org-mode-hook
-              (lambda ()
-                (display-line-numbers-mode 0)
-                (org-bullets-mode 1)))
+(require 'org)
 
-    (add-hook 'org-mode-hook 'visual-line-mode)))
+(when window-system
+  (setq org-hide-emphasis-markers t)
+  (font-lock-add-keywords 'org-mode
+                          '(("^ *\\([-]\\) "
+                             (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+  (add-hook 'org-mode-hook
+            (lambda ()
+              (display-line-numbers-mode 0)
+              (org-bullets-mode 1)))
+
+  (add-hook 'org-mode-hook 'visual-line-mode))
+
 
 (provide 'drn-org-mode)
 ;;; drn-org-mode.el ends here
