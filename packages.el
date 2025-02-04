@@ -49,21 +49,25 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-(package! slack)
-
-;; Harvest
-;; (package! reaper)
-
 ;; EPUB Reader
 (package! nov)
 
 ;; Org Mode
 (package! org-bullets)
+(package! org-verse
+  :recipe (:host github :repo "DarkBuffalo/org-verse"))
 
 ;; OS
 (package! applescript-mode)
 (package! osx-dictionary)
 (package! exec-path-from-shell)
+
+;; UI
+(package! modus-themes)
+(package! treemacs-nerd-icons)
+
+;; Git
+(package! dired-git-info)
 
 ;; Programming
 (package! code-review)
@@ -72,19 +76,16 @@
 (package! yari)
 
 ;; JavaScript
-(package! prettier-js)
-(package! add-node-modules-path)
+;; (package! prettier-js)
+;; (package! add-node-modules-path)
 
 ;; Perl
-(package! sepia)
+;; (package! sepia)
 
 ;; Dylan
 ;; (package! dylan)
 ;; (package! dime)
 
-;; ;; Svelte
+;; Svelte
 ;; (package! svelte-mode)
 
-;; UI
-(package! modus-themes)
-(package! treemacs-nerd-icons)
