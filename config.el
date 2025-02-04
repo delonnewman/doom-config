@@ -97,7 +97,7 @@
 
 (load! "drn-vterm")
 (load! "drn-terminal")
-(load! "drn-alternate-editor")
+(load! "drn-alternate-tool")
 (load! "drn-slack")
 (load! "drn-emojis")
 (load! "drn-tetris")
