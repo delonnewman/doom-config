@@ -104,13 +104,9 @@
 (load! "drn-projectile")
 (load! "drn-theme")
 (load! "drn-dashboard")
+(load! "drn-elfeed")
 
 (load! "drn-org-mode")
 
 (load! "drn-ruby")
 (load! "drn-javascript")
-
-(require 'elfeed-org)
-(elfeed-org)
-(setq rmh-elfeed-org-files (list "~/Notes/elfeed.org"))
-
