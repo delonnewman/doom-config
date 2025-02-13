@@ -1,0 +1,9 @@
+alias rm='rm -r $*'
+alias ll='ls -l $*'
+
+# ruby
+alias bx='bundle exec $*'
+
+# git
+alias gs='git status $*'
+alias gco='git checkout $*'
