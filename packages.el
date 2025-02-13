@@ -69,6 +69,13 @@
 ;; Git
 (package! dired-git-info)
 
+;; Math
+(package! maxima)
+(package! company-maxima)
+
+;; Fun
+(package! 2048-game)
+
 ;; Programming
 (package! code-review)
 
