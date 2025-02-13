@@ -103,6 +103,7 @@
 (load! "drn-tetris")
 (load! "drn-projectile")
 (load! "drn-theme")
+(load! "drn-dashboard")
 
 (load! "drn-org-mode")
 
@@ -112,3 +113,4 @@
 (require 'elfeed-org)
 (elfeed-org)
 (setq rmh-elfeed-org-files (list "~/Notes/elfeed.org"))
+
