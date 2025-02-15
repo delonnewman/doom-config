@@ -78,6 +78,7 @@
 
 ;; Programming
 (package! code-review)
+(package! repl-driven-development)      ; Emacs-style REPL driven development for any REPL
 
 ;; Ruby
 (package! yari)
