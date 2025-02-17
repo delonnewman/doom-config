@@ -57,16 +57,26 @@
 ;; EPUB Reader
 (package! nov)
 
-;; Org Mode
+;; Writing
 (package! org-bullets)
+(package! olivetti)
 
 ;; OS
 (package! applescript-mode)
 (package! osx-dictionary)
 (package! exec-path-from-shell)
 
+;; UI
+(package! modus-themes)
+(package! treemacs-nerd-icons)
+
+(package! engine-mode)
+
 ;; Programming
 (package! code-review)
+
+;; YAML / YS
+(package! yaml-pro)
 
 ;; Ruby
 (package! yari)
@@ -78,6 +88,9 @@
 ;; Perl
 (package! sepia)
 
+;; Smalltalk
+(package! smalltalk-mode)
+
 ;; Dylan
 ;; (package! dylan)
 ;; (package! dime)
@@ -85,6 +98,3 @@
 ;; ;; Svelte
 ;; (package! svelte-mode)
 
-;; UI
-(package! modus-themes)
-(package! treemacs-nerd-icons)
