@@ -228,6 +228,5 @@ an alist of OPTIONS."
 ;; (define-key doom-leader-git-map (kbd "v") #'drn/open-current-project-with-gitup)
 
 
-(provide 'drn-alternate-editor)
-;;; drn-alternate-editor.el ends here
-
+(provide 'drn-alternate-tool)
+;;; drn-alternate-tool.el ends here

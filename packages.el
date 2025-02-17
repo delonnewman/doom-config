@@ -49,17 +49,14 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
-(package! slack)
-
-;; Harvest
-;; (package! reaper)
-
 ;; EPUB Reader
 (package! nov)
 
 ;; Writing
 (package! org-bullets)
 (package! olivetti)
+(package! org-verse
+  :recipe (:host github :repo "DarkBuffalo/org-verse"))
 
 ;; OS
 (package! applescript-mode)
@@ -70,10 +67,22 @@
 (package! modus-themes)
 (package! treemacs-nerd-icons)
 
+;; Search Engines
 (package! engine-mode)
+
+;; Git
+(package! dired-git-info)
+
+;; Math
+(package! maxima)
+(package! company-maxima)
+
+;; Fun
+(package! 2048-game)
 
 ;; Programming
 (package! code-review)
+(package! repl-driven-development)      ; Emacs-style REPL driven development for any REPL
 
 ;; YAML / YS
 (package! yaml-pro)
@@ -82,11 +91,11 @@
 (package! yari)
 
 ;; JavaScript
-(package! prettier-js)
-(package! add-node-modules-path)
+;; (package! prettier-js)
+;; (package! add-node-modules-path)
 
 ;; Perl
-(package! sepia)
+;; (package! sepia)
 
 ;; Smalltalk
 (package! smalltalk-mode)
@@ -95,6 +104,6 @@
 ;; (package! dylan)
 ;; (package! dime)
 
-;; ;; Svelte
+;; Svelte
 ;; (package! svelte-mode)
 

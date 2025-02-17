@@ -97,18 +97,16 @@
 
 (load! "drn-vterm")
 (load! "drn-terminal")
-(load! "drn-alternate-editor")
+(load! "drn-alternate-tool")
 (load! "drn-slack")
 (load! "drn-emojis")
 (load! "drn-tetris")
 (load! "drn-projectile")
 (load! "drn-theme")
+(load! "drn-dashboard")
+(load! "drn-elfeed")
 
 (load! "drn-org-mode")
 
 (load! "drn-ruby")
 (load! "drn-javascript")
-
-(require 'elfeed-org)
-(elfeed-org)
-(setq rmh-elfeed-org-files (list "~/Notes/elfeed.org"))
