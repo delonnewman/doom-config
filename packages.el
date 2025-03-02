@@ -52,8 +52,9 @@
 ;; EPUB Reader
 (package! nov)
 
-;; Org Mode
+;; Writing
 (package! org-bullets)
+(package! olivetti)
 (package! org-verse
   :recipe (:host github :repo "DarkBuffalo/org-verse"))
 
@@ -65,6 +66,9 @@
 ;; UI
 (package! modus-themes)
 (package! treemacs-nerd-icons)
+
+;; Search Engines
+(package! engine-mode)
 
 ;; Git
 (package! dired-git-info)
@@ -81,6 +85,9 @@
 (package! code-review)
 (package! repl-driven-development)      ; Emacs-style REPL driven development for any REPL
 
+;; YAML / YS
+(package! yaml-pro)
+
 ;; Ruby
 (package! yari)
 
@@ -90,6 +97,9 @@
 
 ;; Perl
 ;; (package! sepia)
+
+;; Smalltalk
+(package! smalltalk-mode)
 
 ;; Dylan
 ;; (package! dylan)

@@ -27,9 +27,21 @@
 (require 'org)
 
 (setq org-hide-emphasis-markers t)
+(setq org-hide-leading-stars t)
+(setq org-adapt-indentation nil)
+(setq org-startup-with-inline-images t)
+(setq org-export-with-section-numbers nil)
+
+;; Keep blank lines between headings
+(customize-set-variable 'org-blank-before-new-entry
+                        '((heading . nil)
+                          (plain-list-item . nil)))
+(setq org-cycle-separator-lines 1)
+
 (font-lock-add-keywords 'org-mode
                         '(("^ *\\([-]\\) "
                            (0 (prog1 () (compose-region (match-beginning 1) (match-end 1) "•"))))))
+
 (add-hook 'org-mode-hook
           (lambda ()
             (display-line-numbers-mode 0)
