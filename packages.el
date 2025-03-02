@@ -68,6 +68,7 @@
 
 ;; Git
 (package! dired-git-info)
+(package! blamer)
 
 ;; Math
 (package! maxima)
