@@ -123,8 +123,9 @@ an alist of OPTIONS."
   (drn/open-file-with-command (drn/current-project-path) command))
 
 
-(defvar drn/vscode-command "code")
-(defvar drn/rubymine-command "rubymine")
+(defvar drn/vscode-command "code %s")
+(defvar drn/rubymine-command "rubymine %s")
+(defvar drn/xcode-command "open -a XCode %s")
 
 (defun drn/open-current-file-with-vscode ()
   "Open the current file with Visual Studio Code."
@@ -148,6 +149,18 @@ an alist of OPTIONS."
   "Open the current project in Ruby Mine."
   (interactive)
   (drn/open-current-project-with-command drn/rubymine-command))
+
+
+(defun drn/open-current-file-with-xcode ()
+  "Open the current file with XCode."
+  (interactive)
+  (drn/open-current-file-with-command drn/xcode-command))
+
+
+(defun drn/open-current-project-with-xcode ()
+  "Open the current project with XCode."
+  (interactive)
+  (drn/open-current-project-with-command drn/xcode-command))
 
 
 (defun drn/deftool-function-current-file-code (ident)
@@ -175,7 +188,7 @@ an alist of OPTIONS."
           ,(drn/deftool-function-current-file-code ident)))))
 
 
-;; (macroexpand '(drn/deftool vscode "Visual Studio Code" "code %s"))
+;; (drn/deftool vscode "Visual Studio Code" "code %s")
 ;; (progn
 ;;   (defun drn/open-current-project-with-vscode nil "Open the current project with Visual Studio Code"
 ;;          (interactive)
@@ -205,7 +218,11 @@ an alist of OPTIONS."
 ;; (define-key doom-leader-open-map (kbd "e r") #'drn/open-current-file-with-rubymine)
 ;; (define-key doom-leader-open-map (kbd "e p r") #'drn/open-current-project-with-rubymine)
 
-;; (macroexpand '(drn/deftool xcode "XCode" "open -a XCode %s"))
+;; (drn/deftool xcode "XCode" "open -a XCode %s")
+(drn/add-tool 'xcode "XCode" "open -a XCode %s")
+(drn/get-tool 'xcode)
+(eval (drn/deftool-function-current-project-code 'xcode))
+
 ;; (progn
 ;;   (defun drn/open-current-project-with-xcode nil "Open the current project with XCode"
 ;;          (interactive)
