@@ -12,6 +12,15 @@
 (setq flycheck-check-syntax-automatically '(idle-change save mode-enabled))
 (setq flycheck-display-errors-delay 0.3)
 
+(require 'lsp-mode)
 (add-hook 'cperl-mode-hook 'flycheck-mode)
+(add-hook 'cperl-mode-hook #'lsp)
+
+(set-docsets! 'cperl-mode "Perl" "HTML" "CSS" "HTTP" "Bootstrap_5" "C" "Sass")
+
+;; see https://github.com/tree-sitter-perl/tree-sitter-perl
+;; (setq treesit-language-source-alist
+;;   '((perl . ("https://github.com/tree-sitter-perl/tree-sitter-perl" "release"))))
+;; (treesit-install-language-grammar 'perl)
 
 (provide 'drn-perl)
