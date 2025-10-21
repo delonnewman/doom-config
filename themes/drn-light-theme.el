@@ -24,7 +24,7 @@
  '(font-lock-doc-markup-face ((t (:inherit (font-lock-constant-face)))))
  '(font-lock-escape-face ((t (:inherit (font-lock-regexp-grouping-backslash)))))
  '(font-lock-function-call-face ((t nil)))
- '(font-lock-function-name-face ((t (:foreground "gray19"))))
+ '(font-lock-function-name-face ((t (:foreground "chartreuse4" :background "honeydew1"))))
  '(font-lock-keyword-face ((t (:weight bold :foreground "gray19"))))
  '(font-lock-negation-char-face ((t nil)))
  '(font-lock-number-face ((t (:foreground "DeepSkyBlue3"))))
