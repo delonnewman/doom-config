@@ -16,6 +16,9 @@
 (add-hook 'cperl-mode-hook 'flycheck-mode)
 (add-hook 'cperl-mode-hook #'lsp)
 
+(add-to-list 'auto-mode-alist '("\\.t" . cperl-mode))
+(add-to-list 'auto-mode-alist '("cpanfile" . cperl-mode))
+
 (set-docsets! 'cperl-mode "Perl" "HTML" "CSS" "HTTP" "Bootstrap_5" "C" "Sass")
 
 ;; see https://github.com/tree-sitter-perl/tree-sitter-perl
