@@ -97,7 +97,7 @@
                      :visible (eq window-system 'ns)])
 
 ;; Enable Tool Bar
-(tool-bar-mode +1)
+;; (tool-bar-mode t) ;; disable toolbar for now
 
 ;; SF Icons
 (calle24-refresh-appearance)
