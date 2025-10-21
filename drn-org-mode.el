@@ -49,6 +49,18 @@
 
 (add-hook 'org-mode-hook 'visual-line-mode)
 
+;; Babel
+(org-babel-do-load-languages
+ 'org-babel-load-languages (quote ((emacs-lisp . t)
+                                    (sqlite . t)
+                                    (sql . t)
+                                    (ruby . t)
+                                    (perl . t)
+                                    (js . t)
+                                    (clojure . t)
+                                    (python . t)
+                                    (julia . t))))
+
 
 (provide 'drn-org-mode)
 ;;; drn-org-mode.el ends here
