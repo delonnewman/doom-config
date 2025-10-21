@@ -1,13 +1,12 @@
 ;;; drn-theme.el --- Theme configuration             -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2025  Delon Newman
-
 ;; Author: Delon Newman <contact@delonnewman.name
 
-(defvar drn/dark-theme 'modus-vivendi
+(defvar drn/dark-theme 'drn-dark
   "Sets the theme to use when the UI is in dark mode.")
 
-(defvar drn/light-theme 'modus-operandi
+(defvar drn/light-theme 'drn-light
   "Sets the theme to use when the UI is in light mode.")
 
 (defun drn/load-theme (theme)
