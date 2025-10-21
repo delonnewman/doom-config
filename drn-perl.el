@@ -22,4 +22,11 @@
 (add-to-list 'auto-mode-alist '("\\.ep.*" . web-mode))
 (setq web-mode-engines-alist '(("mojolicious"    . "\\.ep.*")))
 
+(set-docsets! 'cperl-mode "Perl" "HTML" "CSS" "HTTP" "Bootstrap_5" "C" "Sass")
+
+;; see https://github.com/tree-sitter-perl/tree-sitter-perl
+;; (setq treesit-language-source-alist
+;;   '((perl . ("https://github.com/tree-sitter-perl/tree-sitter-perl" "release"))))
+;; (treesit-install-language-grammar 'perl)
+
 (provide 'drn-perl)

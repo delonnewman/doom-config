@@ -47,7 +47,25 @@
             (display-line-numbers-mode 0)
             (org-bullets-mode 1)))
 
-(add-hook 'org-mode-hook 'visual-line-mode)
+;; (setq org-latex-classes
+;;       '(("article"
+;;         ("\\section{%s}" . "\\section*{%s}")
+;;         ("\\subsection{%s}" . "\\subsection*{%s}")
+;;         ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+;;         ("\\paragraph{%s}" . "\\paragraph*{%s}")
+;;         ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+;;        ("report" "\\documentclass[11pt]{report}"
+;;         ("\\part{%s}" . "\\part*{%s}")
+;;         ("\\chapter{%s}" . "\\chapter*{%s}")
+;;         ("\\section{%s}" . "\\section*{%s}")
+;;         ("\\subsection{%s}" . "\\subsection*{%s}")
+;;         ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))
+;;        ("book" "\\documentclass[11pt]{book}"
+;;         ("\\part{%s}" . "\\part*{%s}")
+;;         ("\\chapter{%s}" . "\\chapter*{%s}")
+;;         ("\\section{%s}" . "\\section*{%s}")
+;;         ("\\subsection{%s}" . "\\subsection*{%s}")
+;;         ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))))
 
 ;; Babel
 (org-babel-do-load-languages
@@ -61,6 +79,7 @@
                                     (python . t)
                                     (julia . t))))
 
+(add-hook 'org-mode-hook 'visual-line-mode)
 
 (provide 'drn-org-mode)
 ;;; drn-org-mode.el ends here

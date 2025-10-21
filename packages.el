@@ -62,6 +62,8 @@
 (package! applescript-mode)
 (package! osx-dictionary)
 (package! exec-path-from-shell)
+(package! calle24 :pin "34a9821ec8877945518ddab61fa8b93c2e9b1e79"
+  :recipe (:host github :repo "kickingvegas/calle24"))
 
 ;; UI
 (package! modus-themes)
@@ -72,6 +74,7 @@
 
 ;; Git
 (package! dired-git-info)
+(package! blamer)
 
 ;; Math
 (package! maxima)
@@ -105,5 +108,5 @@
 ;; (package! dime)
 
 ;; Svelte
-;; (package! svelte-mode)
+(package! svelte-mode)
 

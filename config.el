@@ -29,7 +29,7 @@
 ;; refresh your font settings. If Emacs still can't find your font, it likely
 ;; wasn't installed correctly. Font issues are rarely Doom issues!
 
-(setq doom-font (font-spec :family "Jetbrains Mono" :size 14)
+(setq doom-font (font-spec :family "JetBrains Mono" :size 14 :weight 'regular)
       doom-variable-pitch-font (font-spec :family "Helvetica Neue" :size 16)
       doom-serif-font (font-spec :family "Palatino" :size 12))
 
@@ -89,11 +89,30 @@
 ;; OS
 (setq mac-mouse-wheel-mode t)
 (setq mac-mouse-wheel-smooth-scroll t)
+
+(easy-menu-add-item global-map '(menu-bar edit)
+                    ["Emoji & Symbols"
+                     ns-do-show-character-palette
+                     :help "Show macOS Character Palette."
+                     :visible (eq window-system 'ns)])
+
+;; Enable Tool Bar
+;; (tool-bar-mode t) ;; disable toolbar for now
+
+;; SF Icons
+(calle24-refresh-appearance)
+(add-hook 'compilation-mode-hook #'calle24-refresh-appearance)
+
 ;; (when (eq window-system 'mac)
 ;;   (mac-toggle-tab-bar))
 
 ;; Reference for defining keybindings
 ;; https://discourse.doomemacs.org/t/how-to-re-bind-keys/56
+
+(add-to-list 'Info-directory-list "/opt/homebrew/Cellar/texinfo/7.2/share/info")
+(add-to-list 'Info-directory-list "/opt/homebrew/Cellar/make/4.4.1/share/info")
+(add-to-list 'Info-directory-list "/opt/homebrew/Cellar/bash/5.2.37/share/info")
+(add-to-list 'Info-directory-list "/opt/homebrew/Cellar/guile/3.0.10/share/info")
 
 (load! "drn-vterm")
 (load! "drn-terminal")
@@ -110,3 +129,4 @@
 
 (load! "drn-ruby")
 (load! "drn-javascript")
+(load! "drn-perl")
