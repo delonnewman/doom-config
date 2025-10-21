@@ -67,13 +67,13 @@
 ;;         ("\\subsection{%s}" . "\\subsection*{%s}")
 ;;         ("\\subsubsection{%s}" . "\\subsubsection*{%s}"))))
 
-(add-to-list 'org-latex-classes
-             '("short" "\\documentclass[paper=letter,oneside,fontsize=11pt,parskip=full]{tufte-handout}"
-               ("\\section{%s}" . "\\section*{%s}")
-               ("\\subsection{%s}" . "\\subsection*{%s}")
-               ("\\subsubsection{%s}" . "\\subsection*{%s}")
-               ("\\paragraph{%s}" . "\\paragraph*{%s}")
-               ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
+;; (add-to-list 'org-latex-classes
+;;              '("short" "\\documentclass[paper=letter,oneside,fontsize=11pt,parskip=full]{tufte-handout}"
+;;                ("\\section{%s}" . "\\section*{%s}")
+;;                ("\\subsection{%s}" . "\\subsection*{%s}")
+;;                ("\\subsubsection{%s}" . "\\subsection*{%s}")
+;;                ("\\paragraph{%s}" . "\\paragraph*{%s}")
+;;                ("\\subparagraph{%s}" . "\\subparagraph*{%s}")))
 
 (add-hook 'org-mode-hook 'visual-line-mode)
 
