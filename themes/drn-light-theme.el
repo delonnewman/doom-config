@@ -70,7 +70,7 @@
  '(tab-bar-tab-group-current ((t (:inherit tab-bar-tab-inactive :box nil :weight bold))))
  '(tab-bar-tab-group-inactive ((t (:inherit tab-bar-tab-inactive))))
  '(diredfl-file-name ((t (:foreground "DodgerBlue4"))))
- '(diredfl-dir-name ((t (:foreground "DeepSkyBlue3"))))
+ '(diredfl-dir-name ((t (:foreground "DeepSkyBlue4"))))
  '(elisp-shorthand-font-lock-face ((t (:foreground "cyan" :inherit (font-lock-keyword-face)))))
  '(diredfl-deletion-file-name ((t (:foreground "Red"))))
  '(diredfl-deletion ((t (:background "Red" :foreground "Yellow"))))
