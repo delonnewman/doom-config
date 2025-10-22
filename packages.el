@@ -94,7 +94,7 @@
 (package! yari)
 
 ;; JavaScript
-;; (package! prettier-js)
+(package! prettier-js)
 ;; (package! add-node-modules-path)
 
 ;; Perl
