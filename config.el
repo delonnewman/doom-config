@@ -100,8 +100,8 @@
 ;; (tool-bar-mode t) ;; disable toolbar for now
 
 ;; SF Icons
-(calle24-refresh-appearance)
-(add-hook 'compilation-mode-hook #'calle24-refresh-appearance)
+;; (calle24-refresh-appearance)
+;; (add-hook 'compilation-mode-hook #'calle24-refresh-appearance)
 
 ;; (when (eq window-system 'mac)
 ;;   (mac-toggle-tab-bar))
