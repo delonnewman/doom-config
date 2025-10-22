@@ -1,11 +1,12 @@
 ;;; perl.el -*- lexical-binding: t; -*-
 (require 'flycheck)
 (require 'lsp-mode)
+(require 'web-mode)
+(require 'cperl-mode)
 
 (fset 'perl-mode 'cperl-mode)
 
-(setq cperl-invalid-face nil)
-(setq cperl-indent-level 4)
+(setq cperl-indent-level 2)
 
 (setq cperl-indent-parens-as-block t)
 (setq cperl-close-paren-offset (- cperl-indent-level))
@@ -19,8 +20,8 @@
 (add-to-list 'auto-mode-alist '("cpanfile" . cperl-mode))
 
 ;; Mojolicious
-(add-to-list 'auto-mode-alist '("\\.ep.*" . web-mode))
-(setq web-mode-engines-alist '(("mojolicious"    . "\\.ep.*")))
+(add-to-list 'auto-mode-alist '("\\.html.ep" . web-mode))
+(add-to-list 'web-mode-engines-alist '("mojolicious" . "\\.ep"))
 
 (set-docsets! 'cperl-mode "Perl" "HTML" "CSS" "HTTP" "Bootstrap_5" "C" "Sass")
 
