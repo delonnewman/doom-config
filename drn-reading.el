@@ -32,7 +32,7 @@
               :documentation "A string language code")
    (formats :initarg :formats
             :type list
-            :documenation "A list of strings that represent file formats (see drn/pub-formats)"))
+            :documentation "A list of strings that represent file formats (see drn/pub-formats)"))
   "A publication")
 
 (defun drn/data-url (pub issue)
@@ -40,14 +40,12 @@
    drn/pub-url-template
    (drn/issue-string issue)
    (slot-value pub 'symbol)
-   (s-join "%2C" (slot-value pub 'formats))))
+   (s-join "%2C" (slot-value pub 'formats))
+   (slot-value pub 'lang)))
 
 (setq drn.pub/g-E (<drn/pub> :symbol "g" :lang "E" :formats '("EPUB" "PDF")))
 (setq drn.pub/w-E (<drn/pub> :symbol "w" :lang "E" :formats '("EPUB" "PDF")))
 (setq drn.pub/wp-E (<drn/pub> :symbol "wp" :lang "E" :formats '("EPUB" "PDF")))
-
-;; (drn/data-url drn.pub/g-E (drn/issue 2024 11))
-
 
 (defvar drn/wget-path "/opt/homebrew/bin/wget")
 (defvar drn/curl-path "/usr/bin/curl")
