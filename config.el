@@ -3,75 +3,22 @@
 ;; Place your private configuration here! Remember, you do not need to run 'doom
 ;; sync' after modifying this file!
 
-
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
 (setq user-full-name "Delon Newman"
       user-mail-address "contact@delonnewman.name")
 
-;; Doom exposes five (optional) variables for controlling fonts in Doom:
-;;
-;; - `doom-font' -- the primary font to use
-;; - `doom-variable-pitch-font' -- a non-monospace font (where applicable)
-;; - `doom-big-font' -- used for `doom-big-font-mode'; use this for
-;;   presentations or streaming.
-;; - `doom-unicode-font' -- for unicode glyphs
-;; - `doom-serif-font' -- for the `fixed-pitch-serif' face
-;;
-;; See 'C-h v doom-font' for documentation and more examples of what they
-;; accept. For example:
-;;
-;;(setq doom-font (font-spec :family "Fira Code" :size 12 :weight 'semi-light)
-;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
-;;
-;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
-;; up, `M-x eval-region' to execute elisp code, and 'M-x doom/reload-font' to
-;; refresh your font settings. If Emacs still can't find your font, it likely
-;; wasn't installed correctly. Font issues are rarely Doom issues!
-
+;; Fonts
 (setq doom-font (font-spec :family "JetBrains Mono" :size 14 :weight 'regular)
       doom-variable-pitch-font (font-spec :family "Helvetica Neue" :size 16)
       doom-serif-font (font-spec :family "Palatino" :size 12))
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
-(setq display-line-numbers-type t)
+(setq display-line-numbers-type nil)
 
-;; If you use `org' and don't want your org files in the default location below,
-;; change `org-directory'. It must be set before org loads!
+;; Org
 (setq org-directory "~/Notes/")
-
-;; Whenever you reconfigure a package, make sure to wrap your config in an
-;; `after!' block, otherwise Doom's defaults may override your settings. E.g.
-;;
-;;   (after! PACKAGE
-;;     (setq x y))
-;;
-;; The exceptions to this rule:
-;;
-;;   - Setting file/directory variables (like `org-directory')
-;;   - Setting variables which explicitly tell you to set them before their
-;;     package is loaded (see 'C-h v VARIABLE' to look up their documentation).
-;;   - Setting doom variables (which start with 'doom-' or '+').
-;;
-;; Here are some additional functions/macros that will help you configure Doom.
-;;
-;; - `load!' for loading external *.el files relative to this one
-;; - `use-package!' for configuring packages
-;; - `after!' for running code after a package has loaded
-;; - `add-load-path!' for adding directories to the `load-path', relative to
-;;   this file. Emacs searches the `load-path' when you load packages with
-;;   `require' or `use-package'.
-;; - `map!' for bining new keys
-;;
-;; To get information about any of these functions/macros, move the cursor over
-;; the highlighted symbol at press 'K' (non-evil users must press 'C-c c k').
-;; This will open documentation for it, including demos of how they are used.
-;; Alternatively, use `C-h o' to look up a symbol (functions, variables, faces,
-;; etc).
-;;
-;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
-;; they are implemented.
 
 ;; Frame Title
 (setq frame-title-format "%b - Love is as strong as death is")
@@ -130,3 +77,41 @@
 (load! "drn-ruby")
 (load! "drn-javascript")
 (load! "drn-perl")
+
+;; MacOS / Apple
+(load! "applescript")
+(load! "apple-music")
+
+;; Services
+
+(prodigy-define-service
+  :name "MEPS Translation Projects: Frontend Dev Server"
+  :command "npm"
+  :cwd "~/Projects/Theocratic/MEPS/meps-translation/packages/tma-frontend-mediacenter-projects"
+  :args '("run" "dev:frontend")
+  :port 3000
+  :tags '(meps node))
+
+(prodigy-define-service
+  :name "MEPS Translation Projects: Backend Dev Server"
+  :command "npm"
+  :cwd "~/Projects/Theocratic/MEPS/meps-translation/packages/tma-frontend-mediacenter-projects"
+  :args '("run" "dev:backend")
+  :port 3001
+  :tags '(meps node))
+
+(prodigy-define-service
+  :name "MEPS Translation: Fabric Proxy"
+  :command "make"
+  :cwd "~/Projects/Theocratic/MEPS/meps-translation/packages/tma-frontend-mediacenter-projects/api/docker"
+  :args '("down-proxy" "up-proxy")
+  :port 1100
+  :tags '(meps docker))
+
+(prodigy-define-service
+  :name "Forest"
+  :command "make"
+  :cwd "~/Projects/Personal/forest"
+  :args '("server")
+  :port 3000
+  :tags '(work perl))
