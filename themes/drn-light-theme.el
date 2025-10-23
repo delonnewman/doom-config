@@ -116,6 +116,10 @@
  '(font-lock-regexp-face ((t (:inherit (font-lock-string-face)))))
  '(lsp-face-semhl-regexp ((t (:slant italic :inherit (font-lock-string-face)))))
  '(cperl-method-call ((t (:inherit default))))
+ '(info-index-match ((t (:inherit font-lock-string-face))))
+ '(match ((t (:inherit font-lock-string-face))))
+ '(tide-match ((t (:inherit font-lock-string-face))))
+ '(xref-match ((t (:inherit font-lock-string-face))))
  '(default ((t (:family "JetBrains Mono" :foundry "nil" :width normal :height 140 :weight regular :slant normal :underline nil :overline nil :extend nil :strike-through nil :box nil :inverse-video nil :foreground "#292A30" :background "#FFFFFF" :stipple nil :inherit nil)))))
 
 (provide-theme 'drn-light)
