@@ -78,6 +78,10 @@
 (load! "drn-javascript")
 (load! "drn-perl")
 
+;; MacOS / Apple
+(load! "applescript")
+(load! "apple-music")
+
 ;; Services
 
 (prodigy-define-service
