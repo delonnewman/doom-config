@@ -107,3 +107,11 @@
   :args '("down-proxy" "up-proxy")
   :port 1100
   :tags '(meps docker))
+
+(prodigy-define-service
+  :name "Forest"
+  :command "make"
+  :cwd "~/Projects/Personal/forest"
+  :args '("server")
+  :port 3000
+  :tags '(work perl))
