@@ -23,13 +23,13 @@
 (defun drn/issue-string (issue)
   (format "%d%d" (drn/issue-year issue) (drn/issue-month issue)))
 
-(defclass <drn/pub> ()
+(defclass drn/Pub ()
   ((symbol :initarg :symbol
            :type string
            :documentation "The symbol of the publication (see drn/pub-symbols)")
    (lang :initarg :lang
-              :type string
-              :documentation "A string language code")
+         :type string
+         :documentation "A string language code")
    (formats :initarg :formats
             :type list
             :documentation "A list of strings that represent file formats (see drn/pub-formats)"))
@@ -43,9 +43,9 @@
    (s-join "%2C" (slot-value pub 'formats))
    (slot-value pub 'lang)))
 
-(setq drn.pub/g-E (<drn/pub> :symbol "g" :lang "E" :formats '("EPUB" "PDF")))
-(setq drn.pub/w-E (<drn/pub> :symbol "w" :lang "E" :formats '("EPUB" "PDF")))
-(setq drn.pub/wp-E (<drn/pub> :symbol "wp" :lang "E" :formats '("EPUB" "PDF")))
+(setq drn.pub/g-E  (drn/Pub :symbol "g"  :lang "E" :formats '("EPUB" "PDF")))
+(setq drn.pub/w-E  (drn/Pub :symbol "w"  :lang "E" :formats '("EPUB" "PDF")))
+(setq drn.pub/wp-E (drn/Pub :symbol "wp" :lang "E" :formats '("EPUB" "PDF")))
 
 (defvar drn/wget-path "/opt/homebrew/bin/wget")
 (defvar drn/curl-path "/usr/bin/curl")
@@ -64,4 +64,4 @@
 (defvar drn/curl-buffer (generate-new-buffer "*curl output*"))
 (drn/curl (drn/data-url drn.pub/g-E (drn/issue 2024 11)) drn/curl-buffer)
 
-(message "Running %s %s..." "wget" (drn/data-url drn.pub/g-E (drn/issue 2024 11)))
+;; (message "Running %s %s..." "wget" (drn/data-url drn.pub/g-E (drn/issue 2024 11)))

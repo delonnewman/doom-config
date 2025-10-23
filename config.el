@@ -109,10 +109,10 @@
 ;; Reference for defining keybindings
 ;; https://discourse.doomemacs.org/t/how-to-re-bind-keys/56
 
-(add-to-list 'Info-directory-list "/opt/homebrew/Cellar/texinfo/7.2/share/info")
-(add-to-list 'Info-directory-list "/opt/homebrew/Cellar/make/4.4.1/share/info")
-(add-to-list 'Info-directory-list "/opt/homebrew/Cellar/bash/5.2.37/share/info")
-(add-to-list 'Info-directory-list "/opt/homebrew/Cellar/guile/3.0.10/share/info")
+;; (add-to-list 'Info-directory-list "/opt/homebrew/Cellar/texinfo/7.2/share/info")
+;; (add-to-list 'Info-directory-list "/opt/homebrew/Cellar/make/4.4.1/share/info")
+;; (add-to-list 'Info-directory-list "/opt/homebrew/Cellar/bash/5.2.37/share/info")
+;; (add-to-list 'Info-directory-list "/opt/homebrew/Cellar/guile/3.0.10/share/info")
 
 (load! "drn-vterm")
 (load! "drn-terminal")
