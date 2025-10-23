@@ -120,6 +120,8 @@
  '(match ((t (:inherit font-lock-string-face))))
  '(tide-match ((t (:inherit font-lock-string-face))))
  '(xref-match ((t (:inherit font-lock-string-face))))
+ '(consult-highlight-match ((t (:inherit font-lock-string-face))))
+ '(consult-highlight-mark ((t (:inherit font-lock-string-face))))
  '(default ((t (:family "JetBrains Mono" :foundry "nil" :width normal :height 140 :weight regular :slant normal :underline nil :overline nil :extend nil :strike-through nil :box nil :inverse-video nil :foreground "#292A30" :background "#FFFFFF" :stipple nil :inherit nil)))))
 
 (provide-theme 'drn-light)
