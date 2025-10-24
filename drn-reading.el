@@ -64,14 +64,14 @@
 
 (defvar drn/curl-buffer (generate-new-buffer "*curl output*"))
 
-(cl-defun drn/parse-pub-feed (&key data &allow-other-keys)
+(cl-defun drn/proc-pub-feed (&key data &allow-other-keys)
   (message "Got: %S" (alist-get 'files data)))
 
 (cl-defun drn/fetch-pub-feed (&key pub &key issue)
   (request
     (drn/data-url pub issue)
     :parser 'json-read
-    :success #'drn/parse-pub-feed))
+    :success #'drn/proc-pub-feed))
 
 (drn/fetch-pub-feed :pub drn.pub/g-E :issue (drn/issue 2024 11))
 
