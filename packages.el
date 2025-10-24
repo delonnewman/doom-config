@@ -70,7 +70,7 @@
 (package! treemacs-nerd-icons)
 
 ;; Search Engines
-(package! engine-mode)
+;; (package! engine-mode)
 
 ;; Git
 (package! dired-git-info)
@@ -86,6 +86,7 @@
 ;; Programming
 (package! code-review)
 (package! repl-driven-development)      ; Emacs-style REPL driven development for any REPL
+(package! prodigy)
 
 ;; YAML / YS
 (package! yaml-pro)

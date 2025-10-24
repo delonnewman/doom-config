@@ -5,6 +5,7 @@
 ;; Author: Delon Newman <contact@delonnewman.name>
 
 (require 'eieio)
+(require 'request)
 
 (defvar drn/pub-formats '("PDF" "EPUB"))
 (defvar drn/pub-languages '("E"))
@@ -62,6 +63,16 @@
 (defalias 'drn/curl (drn/make-command "curl" 'drn/curl-path))
 
 (defvar drn/curl-buffer (generate-new-buffer "*curl output*"))
-(drn/curl (drn/data-url drn.pub/g-E (drn/issue 2024 11)) drn/curl-buffer)
+
+(cl-defun drn/proc-pub-feed (&key data &allow-other-keys)
+  (message "Got: %S" (alist-get 'files data)))
+
+(cl-defun drn/fetch-pub-feed (&key pub &key issue)
+  (request
+    (drn/data-url pub issue)
+    :parser 'json-read
+    :success #'drn/proc-pub-feed))
+
+(drn/fetch-pub-feed :pub drn.pub/g-E :issue (drn/issue 2024 11))
 
 ;; (message "Running %s %s..." "wget" (drn/data-url drn.pub/g-E (drn/issue 2024 11)))

@@ -84,44 +84,45 @@
 
 ;; Services
 
-(prodigy-define-service
-  :name "MEPS Translation Projects: Frontend Dev Server"
-  :command "npm"
-  :cwd "~/Projects/Theocratic/MEPS/meps-translation/packages/tma-frontend-mediacenter-projects"
-  :args '("run" "dev:frontend")
-  :port 3000
-  :tags '(meps node))
+(after! prodigy
+  (prodigy-define-service
+    :name "MEPS Translation Projects: Frontend Dev Server"
+    :command "npm"
+    :cwd "~/Projects/Theocratic/MEPS/meps-translation/packages/tma-frontend-mediacenter-projects"
+    :args '("run" "dev:frontend")
+    :port 3000
+    :tags '(meps node))
 
-(prodigy-define-service
-  :name "MEPS Translation Projects: Backend Dev Server"
-  :command "npm"
-  :cwd "~/Projects/Theocratic/MEPS/meps-translation/packages/tma-frontend-mediacenter-projects"
-  :args '("run" "dev:backend")
-  :port 3001
-  :tags '(meps node))
+  (prodigy-define-service
+    :name "MEPS Translation Projects: Backend Dev Server"
+    :command "npm"
+    :cwd "~/Projects/Theocratic/MEPS/meps-translation/packages/tma-frontend-mediacenter-projects"
+    :args '("run" "dev:backend")
+    :port 3001
+    :tags '(meps node))
 
-(prodigy-define-service
-  :name "MEPS Translation: Fabric Proxy"
-  :command "make"
-  :cwd "~/Projects/Theocratic/MEPS/meps-translation/packages/tma-frontend-mediacenter-projects/api/docker"
-  :args '("down-proxy" "up-proxy")
-  :port 1100
-  :tags '(meps docker))
+  (prodigy-define-service
+    :name "MEPS Translation: Fabric Proxy"
+    :command "make"
+    :cwd "~/Projects/Theocratic/MEPS/meps-translation/packages/tma-frontend-mediacenter-projects/api/docker"
+    :args '("down-proxy" "up-proxy")
+    :port 1100
+    :tags '(meps docker))
 
-(prodigy-define-service
-  :name "Forest"
-  :command "make"
-  :cwd "~/Projects/Personal/forest"
-  :args '("server")
-  :port 3000
-  :stop-signal 'kill
-  :tags '(work perl))
+  (prodigy-define-service
+    :name "Forest"
+    :command "make"
+    :cwd "~/Projects/Personal/forest"
+    :args '("server")
+    :port 3000
+    :stop-signal 'kill
+    :tags '(work perl))
 
-(prodigy-define-service
-  :name "CORE Recon"
-  :command "bash"
-  :cwd "~/Projects/Clients/CORE-Recon/app-server"
-  :args '("-C" "./dev")
-  :port 3000
-  :stop-signal 'kill
-  :tags '(work perl))
+  (prodigy-define-service
+    :name "CORE Recon"
+    :command "bash"
+    :cwd "~/Projects/Clients/CORE-Recon/app-server"
+    :args '("-C" "./dev")
+    :port 3000
+    :stop-signal 'kill
+    :tags '(work perl)))
