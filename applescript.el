@@ -1,4 +1,4 @@
-;;; applescript-eval.el --- Description -*- lexical-binding: t; -*-
+;;; applescript.el --- Description -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2025 Delon Newman
 ;;
