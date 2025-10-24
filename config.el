@@ -114,4 +114,14 @@
   :cwd "~/Projects/Personal/forest"
   :args '("server")
   :port 3000
+  :stop-signal 'kill
+  :tags '(work perl))
+
+(prodigy-define-service
+  :name "CORE Recon"
+  :command "bash"
+  :cwd "~/Projects/Clients/CORE-Recon/app-server"
+  :args '("-C" "./dev")
+  :port 3000
+  :stop-signal 'kill
   :tags '(work perl))
