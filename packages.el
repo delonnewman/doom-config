@@ -64,6 +64,7 @@
 (package! exec-path-from-shell)
 (package! calle24 :pin "34a9821ec8877945518ddab61fa8b93c2e9b1e79"
   :recipe (:host github :repo "kickingvegas/calle24"))
+(package! airplay)
 
 ;; UI
 (package! modus-themes)
@@ -87,6 +88,7 @@
 (package! code-review)
 (package! repl-driven-development)      ; Emacs-style REPL driven development for any REPL
 (package! prodigy)
+(package! mermaid-mode)
 
 ;; YAML / YS
 (package! yaml-pro)
@@ -96,7 +98,9 @@
 
 ;; JavaScript
 (package! prettier-js)
-;; (package! add-node-modules-path)
+(package! add-node-modules-path)
+(package! ts-repl :pin "6308f931d8d9749694337a870b92a214c4eedfc0"
+  :recipe (:host github :repo "nverno/ts-repl"))
 
 ;; Perl
 ;; (package! sepia)
@@ -111,3 +115,10 @@
 ;; Svelte
 (package! svelte-mode)
 
+(add-to-list 'package-archives '("interactive-lang-tools" . "https://codeberg.org/mmontone/interactive-lang-tools/raw/branch/master/archive/"))
+(package! ilt)
+(package! ilt-doc)
+(package! ilt-inspector)
+(package! ilt-repl)
+(package! phel-mode)
+(package! ilt-phel)
