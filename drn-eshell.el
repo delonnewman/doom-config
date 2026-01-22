@@ -13,3 +13,5 @@
 
 (remove-hook 'eshell-load-hook #'eat-eshell-visual-command-mode)
 (remove-hook 'eshell-load-hook #'eat-eshell-mode)
+
+(append '("htop" "vim" "ssh") eshell-visual-commands)
