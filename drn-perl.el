@@ -1,4 +1,6 @@
 ;;; perl.el -*- lexical-binding: t; -*-
+;;; see https://www.emacswiki.org/emacs/CPerlMode
+
 (require 'flycheck)
 (require 'lsp-mode)
 (require 'web-mode)
@@ -14,7 +16,7 @@
 (setq flycheck-check-syntax-automatically '(idle-change save mode-enabled))
 (setq flycheck-display-errors-delay 0.3)
 
-(add-hook 'cperl-mode-hook #'lsp)
+(add-hook 'cperl-mode-hook #'lsp) ;; TODO: figure out how to configure PERL5LIB
 (add-hook 'cperl-mode-hook 'flycheck-mode)
 (add-to-list 'auto-mode-alist '("\\.t$" . cperl-mode))
 (add-to-list 'auto-mode-alist '("cpanfile" . cperl-mode))
