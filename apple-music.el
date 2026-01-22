@@ -6,15 +6,20 @@
 ;; Keywords: multimedia
 ;;
 
+;;; Code:
+
 (require 'applescript)
 
 (defun apple-music-open ()
+  "Open Apple Music."
   (interactive)
   (applescript (tell (application "Music") (activate))))
 
 
 (cl-defun apple-music-play (&optional specifier &key shuffle)
-  (interactive)
+  "Play music in Apple Music. Play the music specified by SPECIFIER if provided.
+If SHUFFLE is non-nil the music will play in suffle mode."
+  (interactive "sPlay: ")
   (applescript-eval
    `(tell (application "Music")
      (activate)
@@ -23,6 +28,7 @@
 
 
 (defun apple-music-pause ()
+  "Pause music playing in Apple Music."
   (interactive)
   (applescript (tell (application "Music") (activate) (pause))))
 
