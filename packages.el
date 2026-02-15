@@ -87,6 +87,9 @@
 (package! code-review)
 (package! repl-driven-development)      ; Emacs-style REPL driven development for any REPL
 (package! prodigy)
+(package! shell-maker)
+(package! acp)
+(package! agent-shell)
 
 ;; YAML / YS
 (package! yaml-pro)
@@ -110,4 +113,3 @@
 
 ;; Svelte
 (package! svelte-mode)
-
