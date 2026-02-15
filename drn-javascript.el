@@ -24,9 +24,9 @@
 
 ;;; Code:
 
-(require 'tide)
-(require 'svelte-mode)
-(require 'lsp-mode)
+;; (require 'tide)
+;; (require 'svelte-mode)
+;; (require 'lsp-mode)
 
 ;; (setq drn/enable-prettier '())
 ;; (after! prettier-js
@@ -44,26 +44,26 @@
 ;;          (add-hook 'web-mode-hook #'add-node-modules-path)
 ;;          (add-hook 'web-mode-hook #'prettier-js-mode)))))
 
-(defun setup-tide-mode ()
-  (tide-setup)
-  (flycheck-mode +1)
-  (setq flycheck-check-syntax-automatically '(save mode-enabled))
-  (eldoc-mode +1)
-  (tide-hl-identifier-mode +1)
-  (prettier-js-mode +1))
+;; (defun setup-tide-mode ()
+;;   (tide-setup)
+;;   (flycheck-mode +1)
+;;   (setq flycheck-check-syntax-automatically '(save mode-enabled))
+;;   (eldoc-mode +1)
+;;   (tide-hl-identifier-mode +1)
+;;   (prettier-js-mode +1))
 
 ;; Svelte
-(add-hook 'svelte-mode-hook #'lsp)
-(add-to-list 'auto-mode-alist '("\\.svelte" . svelte-mode))
+;; (add-hook 'svelte-mode-hook #'lsp)
+;; (add-to-list 'auto-mode-alist '("\\.svelte" . svelte-mode))
 
 ;; aligns annotation to the right hand side
-(setq company-tooltip-align-annotations t)
+;; (setq company-tooltip-align-annotations t)
 
 ;; formats the buffer before saving
-(add-hook 'before-save-hook 'tide-format-before-save)
+;; (add-hook 'before-save-hook 'tide-format-before-save)
 
 ;; if you use typescript-mode
-(add-hook 'typescript-mode-hook #'setup-tide-mode)
+;; (add-hook 'typescript-mode-hook #'setup-tide-mode)
 ;; if you use treesitter based typescript-ts-mode (emacs 29+)
 ;; (add-hook 'typescript-ts-mode-hook #'setup-tide-mode)
 
