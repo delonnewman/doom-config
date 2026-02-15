@@ -27,5 +27,7 @@
 (after! yari
   (define-key 'help-command (kbd "R")))
 
+(add-to-list 'lsp-language-id-configuration '(".*\\.erb$" . "ruby"))
+
 (provide 'drn-ruby)
 ;; drn-ruby.el ends here
