@@ -71,6 +71,7 @@
 (load! "drn-theme")
 (load! "drn-dashboard")
 (load! "drn-elfeed")
+(load! "drn-agents")
 
 (load! "drn-org-mode")
 
