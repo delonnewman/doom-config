@@ -89,6 +89,9 @@
 (package! repl-driven-development)      ; Emacs-style REPL driven development for any REPL
 (package! prodigy)
 (package! mermaid-mode)
+(package! shell-maker)
+(package! acp)
+(package! agent-shell)
 
 ;; YAML / YS
 (package! yaml-pro)
@@ -114,11 +117,3 @@
 
 ;; Svelte
 (package! svelte-mode)
-
-(add-to-list 'package-archives '("interactive-lang-tools" . "https://codeberg.org/mmontone/interactive-lang-tools/raw/branch/master/archive/"))
-(package! ilt)
-(package! ilt-doc)
-(package! ilt-inspector)
-(package! ilt-repl)
-(package! phel-mode)
-(package! ilt-phel)

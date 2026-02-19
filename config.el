@@ -9,7 +9,7 @@
       user-mail-address "contact@delonnewman.name")
 
 ;; Fonts
-(setq doom-font (font-spec :family "JetBrains Mono" :size 14 :weight 'regular)
+(setq doom-font (font-spec :family "Myna" :size 15 :weight 'regular)
       doom-variable-pitch-font (font-spec :family "Helvetica Neue" :size 16)
       doom-serif-font (font-spec :family "Palatino" :size 12))
 
@@ -71,6 +71,7 @@
 (load! "drn-theme")
 (load! "drn-dashboard")
 (load! "drn-elfeed")
+(load! "drn-agents")
 
 (load! "drn-org-mode")
 
