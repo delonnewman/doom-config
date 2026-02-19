@@ -53,8 +53,8 @@
   (prettier-js-mode +1))
 
 ;; Svelte
-(add-hook 'svelte-mode-hook #'lsp)
-(add-to-list 'auto-mode-alist '("\\.svelte" . svelte-mode))
+;; (add-hook 'svelte-mode-hook #'lsp)
+;; (add-to-list 'auto-mode-alist '("\\.svelte" . svelte-mode))
 
 ;; aligns annotation to the right hand side
 (setq company-tooltip-align-annotations t)
