@@ -27,6 +27,8 @@
 
 (set-docsets! 'cperl-mode "Perl" "HTML" "CSS" "HTTP" "Bootstrap_5" "C" "Sass")
 
+(add-to-list 'lsp-language-id-configuration '(".*\\.ep$" . "perl"))
+
 ;; see https://github.com/tree-sitter-perl/tree-sitter-perl
 ;; (setq treesit-language-source-alist
 ;;   '((perl . ("https://github.com/tree-sitter-perl/tree-sitter-perl" "release"))))
