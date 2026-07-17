@@ -9,7 +9,7 @@
       user-mail-address "contact@delonnewman.name")
 
 ;; Fonts
-(setq doom-font (font-spec :family "Myna" :size 15 :weight 'regular)
+(setq doom-font (font-spec :family "Myna" :size 16 :weight 'regular)
       doom-variable-pitch-font (font-spec :family "Helvetica Neue" :size 16)
       doom-serif-font (font-spec :family "Palatino" :size 12))
 
@@ -70,10 +70,10 @@
 (load! "drn-projectile")
 (load! "drn-theme")
 (load! "drn-dashboard")
-(load! "drn-elfeed")
+;; (load! "drn-elfeed")
 (load! "drn-agents")
 
-(load! "drn-org-mode")
+;; (load! "drn-org-mode")
 
 (load! "drn-ruby")
 (load! "drn-javascript")
@@ -103,3 +103,5 @@
     :port 3000
     :stop-signal 'kill
     :tags '(work perl)))
+
+;; (with-eval-after-load "lsp-protocol" (debug))
