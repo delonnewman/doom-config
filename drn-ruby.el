@@ -27,7 +27,13 @@
 (after! yari
   (define-key 'help-command (kbd "R")))
 
-(add-to-list 'lsp-language-id-configuration '(".*\\.erb$" . "ruby"))
+;; ERB
+(after! lsp-mode
+  (add-to-list 'lsp-language-id-configuration '(".*\\.html.erb$" . "html")))
+
+(after! web-mode
+  (add-to-list 'auto-mode-alist '("\\.html.erb" . web-mode))
+  (add-to-list 'web-mode-engines-alist '("erb" . "\\.erb")))
 
 (provide 'drn-ruby)
 ;; drn-ruby.el ends here
