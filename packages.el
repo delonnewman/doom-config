@@ -49,6 +49,10 @@
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
 
+;; use up-to-date package
+(package! seq)
+(package! doct)
+
 ;; EPUB Reader
 (package! nov)
 
@@ -65,6 +69,9 @@
 (package! calle24 :pin "34a9821ec8877945518ddab61fa8b93c2e9b1e79"
   :recipe (:host github :repo "kickingvegas/calle24"))
 (package! airplay)
+
+;; Terminal Emulator (based on Ghostty's engine)
+(package! ghostel)
 
 ;; UI
 (package! modus-themes)
@@ -85,13 +92,23 @@
 (package! 2048-game)
 
 ;; Programming
-(package! code-review)
-(package! repl-driven-development)      ; Emacs-style REPL driven development for any REPL
-(package! prodigy)
-(package! mermaid-mode)
-(package! shell-maker)
-(package! acp)
-(package! agent-shell)
+(package! repl-driven-development) ; Emacs-style REPL driven development for any REPL
+(package! prodigy) ;; Process management
+(package! mermaid-mode) ;; Mermaid diagrams
+(package! shell-maker) ;; Interactive shells
+(package! cov) ;; Code coverage
+(package! code-review) ;; Code review
+
+;; Database client
+(package! clutch)
+(package! pg)
+(package! pgmacs
+  :recipe (:host github :repo "emarsden/pg-el"))
+
+;; AI Agents
+(package! pi-coding-agent) ;; GUI for pi agent harness
+(package! acp) ;; ACP protocol
+(package! agent-shell) ;; Muti-harness / model interface
 
 ;; YAML / YS
 (package! yaml-pro)
